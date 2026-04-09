@@ -86,8 +86,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-secondary-foreground/10 mt-10 pt-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} חיוכים קטנים - מרפאת שיניים לילדים. כל הזכויות שמורות.
+        <div className="border-t border-secondary-foreground/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground gap-4">
+          <div>
+            © {new Date().getFullYear()} חיוכים קטנים - מרפאת שיניים לילדים. כל הזכויות שמורות.
+          </div>
+          <div className="flex gap-4">
+            <Link href="/accessibility" className="hover:text-primary transition-colors">הצהרת נגישות</Link>
+            <Link href="/legal" className="hover:text-primary transition-colors">מדיניות פרטיות</Link>
+          </div>
         </div>
       </div>
     </footer>

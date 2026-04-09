@@ -45,25 +45,25 @@ export function MindMap() {
       
       <div className="flex flex-col md:flex-row gap-8">
         {/* Navigation / Stages List */}
-        <div className="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible pb-4 md:pb-0 md:w-1/3">
+        <div className="grid grid-cols-2 md:flex md:flex-col gap-3 md:gap-4 md:w-1/3">
           {stages.map((stage) => (
             <button
               key={stage.id}
               onClick={() => setActiveStage(stage)}
               className={cn(
-                "flex items-center gap-4 p-4 rounded-2xl transition-all text-right min-w-[150px]",
+                "flex flex-col md:flex-row items-center md:justify-start gap-2 md:gap-4 p-3 md:p-4 rounded-2xl transition-all text-center md:text-right w-full",
                 activeStage.id === stage.id 
-                  ? "bg-primary text-white shadow-lg scale-105" 
+                  ? "bg-primary text-white shadow-lg md:scale-105" 
                   : "bg-secondary/30 hover:bg-secondary/60 text-foreground"
               )}
             >
               <div className={cn(
-                "w-10 h-10 rounded-full flex items-center justify-center shrink-0",
+                "w-12 h-12 rounded-full flex items-center justify-center shrink-0",
                 activeStage.id === stage.id ? "bg-white/20" : "bg-white"
               )}>
-                <stage.icon className="w-5 h-5" />
+                <stage.icon className="w-6 h-6" />
               </div>
-              <span className="font-bold">{stage.label}</span>
+              <span className="font-bold text-sm md:text-base leading-tight">{stage.label}</span>
               {activeStage.id === stage.id && <ChevronLeft className="mr-auto w-5 h-5 hidden md:block" />}
             </button>
           ))}
