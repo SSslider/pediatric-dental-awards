@@ -28,22 +28,21 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 border border-primary/20 text-primary font-medium text-sm mb-6">
-              <Star className="w-4 h-4 fill-primary" />
-              <span>מרפאת המומחים המובילה לילדים</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 border border-primary/20 text-primary font-medium text-sm mb-6 max-w-full overflow-hidden text-ellipsis whitespace-nowrap md:whitespace-normal">
+              <Star className="w-4 h-4 fill-primary shrink-0" />
+              <span className="truncate md:text-wrap">בדיקות, טיפולים משמרים, איטומים, סתימות, כתרים לילדים ועוד</span>
             </div>
             <h1 className="font-heading font-extrabold text-5xl md:text-7xl leading-tight text-foreground mb-6">
-              חיוכים בריאים <br />
-              <span className="text-primary relative inline-block">
-                מתחילים כאן
+              ד״ר יעל פרונט <br />
+              <span className="text-primary relative inline-block text-4xl md:text-5xl mt-2">
+                מומחית ברפואת שיניים לילדים
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-accent/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                 </svg>
               </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              טיפולי שיניים באווירה רגועה, משחקית ומותאמת אישית לילדים. 
-              אנחנו הופכים את הביקור במרפאה לחוויה שמשאירה טעם טוב.
+              אם הגיע הזמן לבדוק, לטפל או פשוט לוודא שהכל תקין — זה לא חייב להיות מלחיץ.<br/> אנו דוגלים בגישה אחרת: ברוגע, בסבלנות, ובאווירה טובה לילדים ולהורים.
             </p>
           </motion.div>
 
@@ -54,15 +53,15 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
           >
             <Button size="lg" className="rounded-full text-lg h-14 px-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all" asChild>
-              <Link href="#book">
+              <Link href="#contact">
                 <Calendar className="w-5 h-5 ml-2" />
-                קביעת תור אונליין
+                רשמו אותי לבדיקה
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full text-lg h-14 px-8 border-primary/20 hover:bg-white/50" asChild>
               <a href="tel:*5555">
                 <Phone className="w-5 h-5 ml-2" />
-                שיחה עם המרפאה
+                חייגו עכשיו
               </a>
             </Button>
           </motion.div>

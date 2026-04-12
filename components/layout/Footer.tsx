@@ -26,9 +26,9 @@ export function Footer() {
           
           {/* About */}
           <div className="space-y-4">
-            <h3 className="font-heading font-bold text-2xl text-primary">חיוכים קטנים</h3>
+            <h3 className="font-heading font-bold text-2xl text-primary">ד״ר יעל פרונט D.M.D</h3>
             <p className="text-muted-foreground leading-relaxed">
-              מרפאת שיניים בוטיק לילדים ונוער. אנחנו הופכים כל טיפול לחוויה חיובית, נעימה ומעצימה.
+              מומחית ברפואת שיניים לילדים
             </p>
             <div className="flex gap-4">
               <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary">
@@ -45,9 +45,11 @@ export function Footer() {
             <h4 className="font-bold text-lg">קישורים מהירים</h4>
             <ul className="space-y-2">
               <li><Link href="#services" className="text-muted-foreground hover:text-primary transition-colors">טיפולים</Link></li>
-              <li><Link href="#first-visit" className="text-muted-foreground hover:text-primary transition-colors">ביקור ראשון</Link></li>
+              <li><Link href="#about" className="text-muted-foreground hover:text-primary transition-colors">נעים להכיר</Link></li>
               <li><Link href="#for-parents" className="text-muted-foreground hover:text-primary transition-colors">מידע להורים</Link></li>
-              <li><Link href="#faq" className="text-muted-foreground hover:text-primary transition-colors">שאלות ותשובות</Link></li>
+              <li><Link href="#contact" className="text-muted-foreground hover:text-primary transition-colors">רשמו אותי לבדיקה</Link></li>
+              <li><Link href="/accessibility" className="text-muted-foreground hover:text-primary transition-colors">הצהרת נגישות</Link></li>
+              <li><Link href="/legal" className="text-muted-foreground hover:text-primary transition-colors">מדיניות פרטיות</Link></li>
             </ul>
           </div>
 
@@ -56,31 +58,34 @@ export function Footer() {
             <h4 className="font-bold text-lg">צור קשר</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>רחוב הילדים 10, קומה 2, תל אביב</span>
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <span>שד׳ מוריה 64, חיפה</span>
+                  <a href="https://waze.com/ul" target="_blank" rel="noreferrer" className="text-sm text-primary hover:underline">ניווט למרפאה</a>
+                </div>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>*5555</span>
+                <a href="tel:04-8344034" dir="ltr" className="hover:text-primary transition-colors">04-8344034</a>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <a href="https://wa.me/972509344035" dir="ltr" className="hover:text-primary transition-colors">050-9344035 (WhatsApp)</a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>clinic@smiles.co.il</span>
+                <a href="mailto:drfront.yael@gmail.com" className="hover:text-primary transition-colors">drfront.yael@gmail.com</a>
               </li>
             </ul>
           </div>
 
           {/* Opening Hours */}
           <div className="space-y-4">
-            <h4 className="font-bold text-lg">שעות פעילות</h4>
+            <h4 className="font-bold text-lg">פעילות המרפאה</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex justify-between">
-                <span>א' - ה'</span>
-                <span>09:00 - 19:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span>ו'</span>
-                <span>09:00 - 13:00</span>
+                <span>ימי א׳, ג׳, ה׳, ו׳</span>
+                <span dir="ltr">7:30 - 14:00</span>
               </li>
             </ul>
           </div>
@@ -88,11 +93,13 @@ export function Footer() {
 
         <div className="border-t border-secondary-foreground/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground gap-4">
           <div>
-            © {new Date().getFullYear()} חיוכים קטנים - מרפאת שיניים לילדים. כל הזכויות שמורות.
+            © {new Date().getFullYear()} ד״ר יעל פרונט. כל הזכויות שמורות.
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link href="/accessibility" className="hover:text-primary transition-colors">הצהרת נגישות</Link>
             <Link href="/legal" className="hover:text-primary transition-colors">מדיניות פרטיות</Link>
+            <span className="hidden md:inline">|</span>
+            <a href="https://waze.com/ul" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">ניווט למרפאה</a>
           </div>
         </div>
       </div>
